@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#10182D"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="24dp">
+
+
+        <!-- ============================================= -->
+        <!-- BARRA SUPERIOR -->
+        <!-- ============================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:text="◈"
+                android:textColor="#6D9CFF"
+                android:textSize="22sp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_search"
+                android:hint="Buscar"
+                android:gravity="center"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:singleLine="true"
+                android:textSize="12sp"
+                android:textColor="#333333"
+                android:textColorHint="#777777"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="⌕"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================================= -->
+        <!-- MENU -->
+        <!-- ============================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="78dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/bg_chip"
+                android:gravity="center"
+                android:text="▣  Teste"
+                android:textColor="#17172A"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/menuResultado"
+                android:layout_width="96dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/bg_chip_selected"
+                android:gravity="center"
+                android:text="◷  Resultado"
+                android:textColor="#17172A"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_chip"
+                android:gravity="center"
+                android:text="▤  Áreas em TI"
+                android:textColor="#17172A"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================================= -->
+        <!-- TÍTULO -->
+        <!-- ============================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:text="Teste Vocacional"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+
+        <!-- ============================================= -->
+        <!-- CARD DO RESULTADO -->
+        <!-- ============================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:background="@drawable/bg_vocacional_card">
+
+
+            <!-- TÍTULO RESULTADO -->
+
+            <TextView
+                android:id="@+id/txtResultado"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="Resultado"
+                android:textColor="#7654D9"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+
+            <!-- GRÁFICO -->
+
+            <com.example.testevocacional.ResultadoGraficoView
+                android:id="@+id/graficoResultado"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:layout_marginTop="8dp"/>
+
+
+            <!-- ÁREA PRINCIPAL -->
+
+            <TextView
+                android:id="@+id/txtAreaPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:gravity="center"
+                android:text="Sua maior afinidade é com Design UI/UX."
+                android:textColor="#7654D9"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================================= -->
+        <!-- REFAZER TESTE -->
+        <!-- ============================================= -->
+
+        <LinearLayout
+            android:id="@+id/btnRefazer"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_result_button">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:text="Gostaria de refazer o teste?"
+                android:textColor="#7654D9"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:text="↻"
+                android:textColor="#7654D9"
+                android:textSize="34sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
